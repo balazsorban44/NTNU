@@ -1,0 +1,10 @@
+1. Because it has the highest priority in rendering.
+2. An #id is used to identify a single element on a page, like for example a special paragraph, which I would like to link to from the menu. A .class can be used on more elements, which gives the power to style different elements with similar properties (like paragraphs of blog entries, or pictures of a gallery)
+3. RGBA stands for Red,Green,Blue,Alpha, where the three first refers to a color combination of these. The alpha channel is responsible for the transparency. All four values must be a whole number from 0 to 255, including these two.
+4. An HTML document is parsed from the top to the bottom, so by putting the CSS in the <head> , we can be sure that when the actual content is being loaded, it loads in with the wished style.
+5. the following CSS selector is needed to match all the <p> tags inside the <article> tag:
+
+article p
+
+If we wanted to match only the <p> tags directly in the <article> tag:
+article > p
