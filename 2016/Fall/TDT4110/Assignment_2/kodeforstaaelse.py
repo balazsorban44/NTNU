@@ -1,0 +1,5 @@
+print('\n    x = 2')
+print("""    y = *input ('**Skriv inn et tall ")""")
+print('    ***    z = x // y')
+print("    print (z)")
+print('\n    * = Mangler int().\n    ** = Forskjellige apostrofer var brukt.\n    *** = Innrykk er ikke tillatt her.')

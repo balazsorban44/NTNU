@@ -1,8 +1,8 @@
 import string
 import math
-h = float(10**-3)
-x = float(3.14)
+h = float(input('What is h?: '))
+x = float(input('What is x?: '))
 f1 = math.sin(x)
 f2 = math.sin(x+h)
 derivative = (f2 - f1)/h
-format("heia",2)
+print(format(derivative,'.2f'))
