@@ -1,0 +1,55 @@
+1.)
+
+  If the question refers to using getContext('2d'), then we can draw the following things:
+    -Colors, Styles, Shadows
+    -Lines
+    -Rectangles
+    -Paths
+    -Tranformations
+    -Text
+    -Image Drawing
+    -Pixel Manipulation
+    -Compositing
+    -Other
+  (According to http://www.w3schools.com/tags/ref_canvas.asp)
+
+  If the question refers to what parameters getContext() can have:
+    -2d
+    -webgl
+    -webgl2
+    -bitmaprenderer
+  (According to https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext)
+
+
+2.)
+
+  A way to draw a circle to the canvas is:
+    var c=document.getElementById("myCanvas"); // Selecting the canvas itself.
+    var ctx=c.getContext("2d"); // Returning methods and properties for that canvas through an object.
+    ctx.beginPath(); // Begins or resets the path, to be able to draw different things on the canvas.
+    ctx.arc(100,75,50,0,2*Math.PI); // The method for drawing an arc at point x=100,y=75 with r=50 from 0 rad to 2PI rad which is a full circle.
+    ctx.stroke(); // The actual daring of the circle.
+  (According to http://www.w3schools.com/tags/canvas_arc.asp)
+
+3.)
+
+  If the following array is given:
+
+  const countries = ['Norway', 'Sweden',  'Denmark', 'New Zealand'];
+
+  This:
+
+    const countriesStartingWithN = [];
+    for (let i = 0; i < countries.length; i++) {
+      let country = countries[i];
+
+      if (country.startsWith('N')) {
+
+        countriesStartingWithN.push(country);
+
+      }
+    }
+
+  Can be replaced by this .filter() method:
+
+    countries.filter((a) => a.startsWith("N"));

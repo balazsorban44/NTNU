@@ -1,0 +1,7 @@
+a) 4,294,967,295
+b) Digital-to-Analog-Converter. Enhet for å konvertere digital audio (0 og 1) signaler om til analog audio signaler. For eksempel sende audio til hodetelefoner.
+c) 10010 og 12
+d) 0100 1111 0100 1100 0100 0101
+e) Det minste elementet av et bilde
+f) Digital lyd enklere å lage (tar mindre plass), består av 0ere og 1ere, analog lyd veldig ren lyd(FLAC) består av bølger.
+g) Data om andre data.

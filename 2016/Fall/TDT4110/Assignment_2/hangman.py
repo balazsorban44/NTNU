@@ -20,7 +20,7 @@ print("\n    Let's start ",name,'! Your word looks like this "',''.join(guessed_
 while secret_word!=guessed_word:
     if lives>0:
         i=0
-        guess = input('    Guess a letter: ')
+        guess = input('    Guess a letter, or if you know the word already, just write it: ')
 
         if guess==str(''.join(secret_word)):
             guessed_word=list(guess)

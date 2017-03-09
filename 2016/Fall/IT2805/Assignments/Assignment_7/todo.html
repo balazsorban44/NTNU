@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>A To Do list Balázs Orbán</title>
+
+    <style media='screen'>
+    body,button{background:#333}.change,button,h1,h3,h3 a{color:gold}#content,h1,h3,ul li{position:relative}h3 a,ul li,ul li span{transition:.3s ease-in-out}h1,h3{z-index:1}body{display:flex;flex-direction:column;align-items:center;min-height:100vh;width:100vw}*,h3,h3 a{color:#333}*{margin:0;padding:0;font-family:sans-serif;font-weight:bolder;font-size:1em;border:none;outline:0}#content{min-width:200px;min-height:114px;padding:20px;border-radius:10px;background-color:gold;border:5px solid #daa520;border-bottom: 10px solid #daa520;box-shadow:0 0 4px 4px rgba(0,0,0,.2)}h1{font-size:1.3em;margin:5% 0 0 -2em}h2{font-size:1.1em;text-decoration:underline;display:inline}h2:after{font-size:.8em}h3,h4{font-size:.5em;bottom:-1.1em;position:absolute}h3{padding:0 5px;right:0}h3 a{text-decoration:none}h3 a:hover{color:#fff}h4{left:0;padding:0 8px}input[type=text]{padding:10px;margin:0 10px 20px 0;min-width:240px;border-radius:5px;border:1px solid #333;box-shadow:inset 0 0 3px rgba(0,0,0,.3)}#buttons{position:absolute;top:5px;right:-24px;display:flex;flex-direction:column;align-items:center}button{border-radius:50%;padding:15px;margin-top:5px;border:3px solid #daa520;width:48px;height:48px;cursor:pointer;font-size:1.5em;line-height:0;transition:.4s ease-in-out}button:hover{color:#daa520;background:#fff}.change{display:flex;justify-content:center;width:24px;height:24px;font-size:1em;padding:15px}#clear{font-size:.6em;line-height:normal;vertical-align:top;padding-left:10px}#clear:hover{transform:none}ul{margin-top:10px}ul li{max-width:90%;list-style-type:none;padding:5px;align-self:flex-start;border-bottom:1px solid #daa520}ul li:hover{background-color:rgba(255,255,255,.3);cursor:pointer}ul li input{margin:0 5px}ul li span{position:absolute;right:0;padding-right:5px}ul li span:hover{transform:scale(1.2);transform-origin:center}ul li span:after{content:'✕';color:#daa520}
+    </style>
+
+  </head>
+  <body onload='document.getElementsByTagName("input")[0].focus()'>
+    <h1>A VERY NICE TO DO LIST</h1>
+    <div id=content>
+      <div>
+        <input type='text' placeholder='Click + or press Enter.' onkeydown='if (event.keyCode === 13) {addTask(undoneTasks)}'>
+        <div id=buttons>
+          <button title='Add the task to your To Do list.' class='change' type='button' onclick='addTask(undoneTasks)'>+</button>
+          <button title='Remove the last task from your To Do list.' class='change' type='button' onclick='removeLastTask(undoneTasks)'>-</button>
+          <button title='Delete all tasks from your To Do list.' id='clear' type='button' onclick='undoneTasks=[];doneTasks=[];refresh(undoneTasks,doneTasks)'>clear</button>
+        </div>
+      </div>
+      <h2>Your things to do</h2> <output title='done/undone' id='out'> 0/0:</output>
+      <ul id='tasks'></ul>
+      <h4>v3.0</h4>
+      <h3>created by <a href="http://balazsorban.com">balázs orbán</a></h3>
+    </div>
+    <script type='text/javascript' src='todo.js' async></script>
+  </body>
+</html>

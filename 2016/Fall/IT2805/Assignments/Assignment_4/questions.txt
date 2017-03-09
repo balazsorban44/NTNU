@@ -1,0 +1,3 @@
+1. Mostly to reduce data usage and spare the battery. (Though companies like Facebook started forcing autoplay on videos.)
+2. The device's width is under the media query's setting (min-device-width), so it will be rendered according to the properties provided without the media query.
+3. Responsive websites more flexible and load faster, since all the information is stored in one file, making less requests to the server. It is also much easier to control the braking points.

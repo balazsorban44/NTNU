@@ -1,0 +1,5 @@
+1.
+Absolute positioning will position the element to its first parent with relative (or absolute) positioning. If there is no such, it will go backwards, until it hits the <html> element. Then it will be positioned relative to the document itself.
+Fixed positioning will position the element relative to the viewport, independent from its parents.
+
+2. With the :nth-child(3) pseudo-selector

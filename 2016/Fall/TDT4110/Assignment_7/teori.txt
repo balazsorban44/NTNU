@@ -1,0 +1,6 @@
+a) Lukket internett (for eksempel innsida, eller Nord Korea)
+b) Kobler en datamaskin til en et nettverk, host kan være både client eller server.
+c) En protokoll er består av regler som beskriver måten enheter er koblet på et nettverk.
+d) Internet Protocoll address. All enhet koblet til Internettet har sin unik identifikasjonsnummer.
+e) IPv6 er etterkommeren til IPv4. Mye... MYE mer adresse er tilgjengelig. (4,294,967,296 < 340,282,366,920,938,000,000,000,000,000,000,000,000) => Mer enhet kan kobles sammen.
+f) Når en pakke sendes, en må definere sin egen adresse (source address) og mottakerens adresse (destination address). IP er klassifisert i 5 klasser. (A-E)

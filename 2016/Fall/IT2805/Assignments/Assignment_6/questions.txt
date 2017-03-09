@@ -1,0 +1,5 @@
+1. Strict equality gives True only when the two sides are absolutely identical, or one side is -0 and the other one is +0.
+2. Decides to send the form-data whether as GET or POST. There are major differences between the two.
+3. One of the basic functionality of the GET is to put the form-data into the URL. Good for Bookmarking for example.
+4. Never trust the user! Front end validations are much easier to get around, then back end. It should only serve as feedback for better user experience.
+5. Textarea is used for multi line input, with fixed width font (Usually Courier).

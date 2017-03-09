@@ -1,0 +1,38 @@
+a)
+Pseudokode er en forenklet, kode skrevet som tekst.
+For eksempel kan pseudokoden til:
+
+if k < 40:
+    print("passed")
+else:
+    print("not passed")
+skrives slik:
+Hvis karakteren er mindre enn 40
+    print ut "passed"
+else:
+    print ut "not passed"
+
+b)
+Et flytdiagram, er en geometrisk representasjon av koden, ved hjelp av figurer og piler.
+
+c)
+Debugging er å finne og fikse bugs, feiler i programmet.
+
+d)
+Et lavtnivåspråk (f.eks. assemblerspråk) er mer primitivt og mindre abstrakt enn høynivåspråk. Det er mer likt maskinkoden enn hva høytnivåspråk er,
+som kan være bra, siden man i noen tilfeller får mindre antall operasjoner enn med høytnivåspråk. Et høytnivåspråk trenger først å gå igjennom en
+kompilator for å bli oversatt til et lavtnivåspråk, slik som maskinkode eller assemblerspråk, før den kan bli lest av maskinen.
+Med et høytnivåspråk klarer man imidlertid å lese og å logisk klare å tolke koden (ihvertfall fortere enn ved et lavtnivåspråk).
+
+e)
+Fetch-Execute cycle:
+IF (Instruction Fetch)
+ID (Instruction Decode)
+DF (Data Fetch)
+EX (Insruction Execute)
+RR (Result Return)
+
+Fetch-Execute cycle har fem steg: hent instruksjone, finn ut hva den skal gjøre, hent all data som trengs for å utføre operasjonen, utføre operasjonen, og lagre resultatet. Denne prosessen er repetert billioner ganger hvert sekund. Kretsen bruker de fem elementære delene/subsystemene til en datamaskin: minne, kontrollenhet, ALU (Arithmetic Logic Unit), inputenhet og outputenhet.
+
+f)
+Programtelleren (PC) er en av to registere som kontrollenheten har. Den gir lokasjonen til den neste instruksjonen som kontrollenheten skal begynne på, til minnet. Altså, når en Fetch-Execute cycle begynner, henter kontrollenheten stedet hvor instruksjonen befinner seg, fra PC'en.

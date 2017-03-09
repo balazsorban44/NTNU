@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tax forms: Bar chart with lines</title>
+    <meta charset="UTF-8">
+    <script src="taxForms.js"></script>
+  </head>
+  <body>
+
+    <canvas id="chart" width="700" height="500"></canvas>
+
+    <script>
+      const canvas = document.getElementById('chart');
+      const context = canvas.getContext('2d');
+
+      /* Draw a line from (fromX, fromY) to (toX, toY) */
+      function drawLine(fromX, fromY, toX, toY) {
+        context.beginPath();
+        context.moveTo(toX, toY);
+        context.lineTo(fromX, fromY);
+        context.stroke();
+      }
+
+      /* Draw a text (string) on (x, y) */
+      function drawText(text, x, y) {
+        context.fillText(text, x, y);
+      }
+
+      /* Draw a text and with a line to its right */
+      function drawLineWithText(text, fromX, fromY, toX, toY) {
+        drawText(text, fromX - 50, fromY + 10);
+        drawLine(fromX, fromY, toX, toY);
+      }
+
+      /* Insert your code here. */
+      function drawRect(color, X, Y, width, height){
+        context.beginPath();
+        context.rect(X, Y, width, height);
+        context.fillStyle = color;
+        context.fill();
+      }
+      for (var i = 0; i < 11; i++) {
+        drawLine(50,50*i-50,600,50*i-50);
+        drawText(1100000-(i*100000),0,i*50-40);
+      }
+      drawText('Income', 660,12.5);
+      drawText('Wealth', 660,37.5);
+      drawRect('red', 610,0,40,20);
+      drawRect('blue', 610,25,40,20)
+    </script>
+  </body>
+</html>

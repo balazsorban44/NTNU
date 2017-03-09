@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Norwegian Tax Administration - Tax form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style media="screen">
+            *{
+              margin:0;
+              padding: 0;
+              font-family: sans-serif;
+              color: cornflowerblue
+            }
+            ::-webkit-input-placeholder {color: rgba( 101, 156, 239,.6)}
+            ::-moz-placeholder {color: rgba( 101, 156, 239,.6)}
+              :-ms-input-placeholder {color: rgba( 101, 156, 239,.6)}
+            body{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              min-height: 100vh;
+              width: 100vw;
+              background: cornflowerblue;
+            }
+            fieldset{
+              background: white;
+              max-width: 360px;
+              border: 1px solid cornflowerblue;
+              border-radius: 4px;
+              padding: 20px;
+              margin:5px 0
+            }
+            #title{
+              color:white;
+              text-transform: uppercase;
+            }
+            fieldset input{
+              display: inline-block;
+              background: transparent;
+              border: 1px solid cornflowerblue;
+              border-radius: 4px;
+              padding:5px;
+              margin: 5px 0
+            }
+            fieldset input:focus{
+              outline: 1px solid lightblue;
+            }
+            form div{
+              padding:5px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            fieldset div input{
+              padding: 0 10px
+            }
+            #gender div{
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              padding: 0
+            }
+            .field{
+              width: calc(100% - 10px)
+            }
+            #strengthIn,#speedIn,#intellIn{
+              padding: 0;
+              margin-left: 5px
+            }
+
+            label{
+              padding-right: 10px
+            }
+
+            input[type=range] {
+              -webkit-appearance: none;
+              width: 100%;
+              margin: 6px 0;
+            }
+            input[type=range]:focus {
+              outline: none;
+            }
+            input[type=range]::-webkit-slider-runnable-track {
+              width: 100%;
+              height: 4px;
+              cursor: pointer;
+              background: rgba(0, 0, 255, .2);
+            }
+            input[type=range]::-webkit-slider-thumb {
+              box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+              border: 0px solid rgba(0, 0, 0, 0);
+              height: 16px;
+              width: 16px;
+              border-radius: 50px;
+              background: #659cef;
+              cursor: pointer;
+              -webkit-appearance: none;
+              margin-top: -6px;
+            }
+            input[type=range]:focus::-webkit-slider-runnable-track {
+              background: rgba(0, 0, 255, 0.2);
+            }
+            input[type=range]::-moz-range-track {
+              width: 100%;
+              height: 4px;
+              cursor: pointer;
+              box-shadow: 0.1px 0.1px 0px rgba(0, 0, 0, 0), 0px 0px 0.1px rgba(13, 13, 13, 0);
+              background: rgba(0, 0, 255, 0.2);
+              border-radius: 0px;
+              border: 0px solid rgba(1, 1, 1, 0);
+            }
+            input[type=range]::-moz-range-thumb {
+              box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+              border: 0px solid rgba(0, 0, 0, 0);
+              height: 16px;
+              width: 16px;
+              border-radius: 50px;
+              background: #659cef;
+              cursor: pointer;
+            }
+            input[type=range]::-ms-track {
+              width: 100%;
+              height: 4px;
+              cursor: pointer;
+              background: transparent;
+              border-color: transparent;
+              color: transparent;
+            }
+
+            input[type=range]::-ms-thumb {
+              box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+              border: 0px solid rgba(0, 0, 0, 0);
+              height: 16px;
+              width: 16px;
+              border-radius: 50px;
+              background: #659cef;
+              cursor: pointer;
+              height: 4px;
+            }
+          #submit{
+            transition: .3s ease-in-out;
+            padding: 5px 20px;
+            background: cornflowerblue;
+            cursor: pointer;
+            color:white;
+            margin: 0 50%;
+            transform: translateX(-50%);
+          }
+
+        </style>
+    </head>
+    <body>
+          <form id="tax-form" action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" method="post">
+          <div id=title>Please fill in this nice form</div>
+          <fieldset>
+          <fieldset>
+            <legend>Basic information:</legend>
+            <input type="text" class="field" name="name" placeholder="Real name" pattern="([A-Za-z ]*)" required>
+            <input type="text" class="field" name="hero" placeholder="Hero name" required>
+            <input type="email" class="field" name="email" placeholder="E-mail address" required>
+            <input type="date" class="field" name="Birthday" max="1987-12-31" required>
+          </fieldset>
+          <fieldset id="gender">
+            <legend>Gender:</legend>
+          <div>
+            <div>
+              <input type="radio" name="gender" value="male" checked> Male
+            </div>
+            <div>
+              <input type="radio" name="gender" value="male" > Female
+            </div>
+          </div>
+          </fieldset>
+          <fieldset>
+          <legend>Skills:</legend>
+          <div>
+            <label>Strength:</label>
+            <output name="strength" id="strengthOut">5</output>
+            <input type="range" name="strength" id="strengthIn" value="5" min="1" max="10" oninput="strengthOut.value = strengthIn.value" >
+          </div>
+          <div>
+            <label>Speed:</label>
+            <output name="speed" id="speedOut">5</output>
+            <input type="range" name="speed" id="speedIn" value="5" min="1" max="10" oninput="speedOut.value = speedIn.value" >
+          </div>
+          <div>
+            <label>Intelligence:</label>
+            <output name="intelligence" id="intellOut">5</output>
+            <input type="range" name="intelligence" id="intellIn" value="5" min="1" max="10" oninput="intellOut.value = intellIn.value" >
+          </div>
+          </fieldset>
+          <fieldset>
+            <legend>Tax:</legend>
+            <div>
+              <label>Income(NOK):</label>
+              <input oninput="taxCal()" type="number" class="field" name="income" min="0" placeholder="Your income" required>
+            </div>
+            <div>
+              <label>Wealth(NOK):</label>
+              <input oninput="taxCal()" type="number" class="field" name="wealth" min="0" placeholder="Your wealth" required>
+            </div>
+            <div>
+              <label>Tax(NOK):</label>
+              <input type="number" class="field" placeholder="Your tax" name="tax" readonly>
+            </div>
+          </fieldset>
+          <div>
+            <label>Do you wear spandex?:</label> <input type="checkbox" name="spandex">
+          </div>
+          <input id="submit" type="submit" value="Submit">
+        </fieldset>
+        </form>
+        <script type="text/javascript">
+          function taxCal(){
+            var taxform = document.forms["tax-form"]
+            taxform["tax"].value = (taxform["income"].value *0.35 + taxform["wealth"].value *0.25).toFixed(2)
+            console.log("Welcome to the log! Pay",taxform["tax"].value,"NOK as tax, please.");
+          }
+        </script>
+    </body>
+</html>
