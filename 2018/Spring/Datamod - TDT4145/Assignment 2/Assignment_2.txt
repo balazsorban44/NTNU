@@ -1,0 +1,53 @@
+1.)
+  a)
+    Total spesialisering: En entitet må alltid være i en subklasse (F.eks.: Vehicle, Car, Bus, etc..., Finnes ingen Vehicle i virkeligheten, bare Car, Bus, etc...)
+    Disjunkte subklasser: En entitet kan høre til kun en subklasse. (F. eks.: Se eksempel øverst. En Vehicle kan ikke være både Car og Bus, eller Sykkel og båt... (Tenk kun på "vanlige" kjøretøyer))
+  
+  b)
+    i) Se 1.a)
+    ii) 
+    iii) Sykehus sine leger. En lege kan høre til forskjellige subklasser(spesialisering) samtidig. 
+    iV) 
+  
+  c)
+    Figur 1: Relasjonen skal ikke være på figuren
+    Figur 4: Det er ingen Superklasse på figuren
+
+3.)
+  Primærnøkkel og entitetsintegritet: Entitetsintegritet betyr at det finnes ikke to like entiteter, så hvis to entiteter har primærnøkkler, de kan ikke være like.
+  Fremmednøkkel og referanseintegritet: Hvis to entiteter har samme fremmednøkkel, begge to refererer til samme entitet.
+  
+4.)
+  a)
+    Eksamen(EksamenNr*, Fagkode, Hjelpemiddelkode)
+    Eksamenslokale(RomNr*, Navn, Kapasitet)
+    Student(StudentNr*, Navn, EksamenNr**)
+    Bord(BordNr*, Type, RomNr**)
+    Stol(StolNr*, Type, RomNr**)
+    Oppsatt(EksamenNr***, StudentNr***, RomNr***)
+
+    * - Primærnøkkel
+    ** - Fremmednøkkel
+
+  b)
+    1.) ∏ Hotellnr, Navn (Hotell)
+    2.) ∏ Hotellnr, Navn (σ Område = "Barcelona" (Hotell))
+    3.) (∏ Hotellnr, Navn (Hotell)) ⋈ (∏ RomNr, Hotellnr (σ Kvadratmeterstørrelse > 100 (Hotellrom)))
+    4.) COUNT(
+          (∏ RomNr, Hotellnr (σ Kvadratmeterstørrelse <= 8 (Hotellrom)) ⋈ 
+            (∏ RomNr 
+              (σ Varighet > 7 (Bestilling))
+            )
+          )
+        )
+    5.) (∏ Fornavn, Etternavn, Telefonnr
+          ((∏ Hotellnr (σ Område = "Madrid" (Hotell))) ⋈ 
+            (∏ Hotellnr, Fornavn, Etternavn, Telefonnr
+              ((∏ Hotellnr, RomNr, Kundenr (Hotellrom)) ⋈ (Kunde))
+            )
+          )
+        )
+    6.) τ(∏ Varighet ((∏ Kundenr, Varighet (Rombestilling)) ⋈ 
+            (∏ Kundenr (σ Fornavn = "Ole", Etternavn = "Hansen" (Kunde)))
+          )
+        )

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram height="780" made_with_version="1.5" name="Default" width="800">
+<entity id="0" is_weak="false" name="Kinosenter" x="66" y="42">
+<attributes>
+<attribute is_hidden="false" is_key="true" name="KinoID" type=""/>
+<attribute is_hidden="false" is_key="false" name="Navn" type=""/>
+<attribute is_hidden="false" is_key="false" name="Telefonnummer" type=""/>
+</attributes>
+</entity>
+<entity id="1" is_weak="true" name="Kinosal" x="73" y="250">
+<attributes>
+<attribute is_hidden="false" is_key="true" name="Salsnummer" type=""/>
+<attribute is_hidden="false" is_key="false" name="Kapasitet" type=""/>
+<attribute is_hidden="false" is_key="false" name="KanLeiesUt" type=""/>
+</attributes>
+</entity>
+<entity id="6" is_weak="false" name="Film" x="200" y="57">
+<attributes>
+<attribute is_hidden="false" is_key="true" name="filmnummer" type=""/>
+<attribute is_hidden="false" is_key="false" name="Tittel" type=""/>
+<attribute is_hidden="false" is_key="false" name="varighet" type=""/>
+</attributes>
+</entity>
+<entity id="10" is_weak="false" name="Billett" x="333" y="42">
+<attributes>
+<attribute is_hidden="false" is_key="true" name="billettID" type=""/>
+<attribute is_hidden="false" is_key="false" name="pris" type=""/>
+<attribute is_hidden="false" is_key="false" name="setenummer" type=""/>
+<attribute is_hidden="false" is_key="false" name="kjøpsdato" type=""/>
+</attributes>
+</entity>
+<entity id="11" is_weak="false" name="Fremvisning" x="319" y="217">
+<attributes>
+<attribute is_hidden="false" is_key="true" name="serienummer" type=""/>
+<attribute is_hidden="false" is_key="false" name="dato" type=""/>
+<attribute is_hidden="false" is_key="false" name="visningsTidspunkt" type=""/>
+<attribute is_hidden="false" is_key="false" name="inntekter" type=""/>
+</attributes>
+</entity>
+<diamond id="3" is_weak="true" name="SalPåSenter" x="104" y="165">
+<attributes/>
+</diamond>
+<diamond id="7" is_weak="false" name="Godkjent" x="223" y="259">
+<attributes/>
+</diamond>
+<diamond id="12" is_weak="false" name="Fremvise film" x="218" y="316">
+<attributes/>
+</diamond>
+<diamond id="15" is_weak="false" name="Billettsalg" x="358" y="159">
+<attributes/>
+</diamond>
+<line cardinality_string="(1,1)" has_u="false" id="4" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="1" direction="1" object_id="1" relation_point_x="120" relation_point_y="250"/>
+<connection connection_side="3" direction="1" object_id="3" relation_point_x="120" relation_point_y="197"/>
+</line>
+<line cardinality_string="(1,n)" has_u="false" id="5" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="3" direction="1" object_id="0" relation_point_x="119" relation_point_y="117"/>
+<connection connection_side="1" direction="1" object_id="3" relation_point_x="120" relation_point_y="165"/>
+</line>
+<line cardinality_string="(0,n)" has_u="false" id="8" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="3" direction="1" object_id="6" relation_point_x="241" relation_point_y="132"/>
+<connection connection_side="1" direction="1" object_id="7" relation_point_x="239" relation_point_y="259"/>
+</line>
+<line cardinality_string="(0,n)" has_u="false" id="9" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="2" direction="0" object_id="1" relation_point_x="167" relation_point_y="306"/>
+<connection connection_side="0" direction="0" object_id="7" relation_point_x="223" relation_point_y="275"/>
+</line>
+<line cardinality_string="(0,n)" has_u="false" id="13" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="2" direction="0" object_id="1" relation_point_x="167" relation_point_y="278"/>
+<connection connection_side="0" direction="0" object_id="12" relation_point_x="218" relation_point_y="332"/>
+</line>
+<line cardinality_string="(1,1)" has_u="false" id="14" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="3" direction="1" object_id="11" relation_point_x="379" relation_point_y="307"/>
+<connection connection_side="2" direction="0" object_id="12" relation_point_x="250" relation_point_y="332"/>
+</line>
+<line cardinality_string="(1,1)" has_u="false" id="16" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="3" direction="1" object_id="10" relation_point_x="377" relation_point_y="132"/>
+<connection connection_side="0" direction="0" object_id="15" relation_point_x="358" relation_point_y="175"/>
+</line>
+<line cardinality_string="(1,n)" has_u="false" id="17" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="1" direction="1" object_id="11" relation_point_x="379" relation_point_y="217"/>
+<connection connection_side="3" direction="1" object_id="15" relation_point_x="374" relation_point_y="191"/>
+</line>
+</diagram>

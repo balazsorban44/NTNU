@@ -1,0 +1,27 @@
+4.
+	a) 10
+	b)
+	alternativ A: Om man får lov å legge til et ekstra felt, nemmlig en ID for hver fakultet, da er det greit å dele opp tabellen i 3:
+		Person(PersonID*, Name, PhoneNr)
+		Faculty(FacultyID*, FacultyCode, Name, Location)
+		FacultyForPerson(PersonID**, FacultyID**)
+	alternativ B: Mindre effektiv enn A, men trenger ikke ekstra felt:
+		Person(PersonID*, Name, PhoneNr, FacultyCode**)
+		Faculty(FacultyCode*, Name, Location)
+
+* - Primary key
+** - Foreign key
+
+5.
+	a)
+		3) a1->c1 og a1->c2
+		4) a1b1->c1 og a1b1->c2
+		6) d2->c2 og d2->c4
+		9) A+ = AB ⊂ R
+
+	b)
+		A+ = AC
+		D+ = D
+		BC+ = BCD
+		AB+ = ABCD
+		

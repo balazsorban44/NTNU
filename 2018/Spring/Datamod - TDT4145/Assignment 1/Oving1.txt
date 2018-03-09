@@ -1,0 +1,43 @@
+1
+  a)
+    DB: En strukturert datamengde
+    DBMS: En programvare som håndterer lagring og endring av data i en database
+  b)
+    1) Program-data uavhengighet:
+      Brukerapplikasjonen og databasen er uavhengige av hverandre, og koblingen mellom dem skjer
+      vha. en DMBS.
+
+    2) Flerbrukersstøtte:
+      Flere bruker har tilgang til databasen samtidig.
+    3) Selvbeskrivende: Informasjonen lagret i en database heter meta-data
+2)
+  a)
+    1) Entitetklasse er et slags mal for en entitet,
+       mens entitet representerer et konsept eller objekt fra den reelle verden.
+    2) En relasjonsklasse er et mal for relasjoner
+       En relasjon er en sammenheng mellom entiteter
+    3) Fordi en entitet må være unik i miniverden, som kan oppnås vha. et unikt nøkkelattributt.
+
+  b)
+    1) true, TacoID er understreket.
+    2) true, alle relasjonene mellom taco og pålegg er (0,n), men
+             det også betyr at man kan bestille en tom Taco
+    3) true, en ordre må ha en bestilling, men det treng ikke nødvendigvis være Taco
+    4) true, det er ikke en øvre grense på hvor mange Taco en kan kjøpe
+    5) maybe, databasen gir ikke nok informasjon for å avgjøre dette
+    6) true, en kunde kan ha 0 kunderordre
+    7) true, relasjonen mellom Taco og Grønnsak definerer en vekt
+    8) true, men en ansatt må jobbe i hvertfall en butikk
+    9) ????
+    10) false, det er ikke en nøkkel
+
+3)
+  a) En svak klasse kan ikke eksistere uten en entitetsklasse
+
+  b) (1,n) går bra, det betyr bare at Kinosalen tilhører flere kinoer 
+      (som er da svært usannsynlig i virkeligheten).
+      Om det er (0,1), så kan en Kinosal være uavhengig av noen Kinoer, 
+      altså det er ikke "svak" lenger.
+  c), d), e) Se vedlegg
+
+4) Se vedlegg
